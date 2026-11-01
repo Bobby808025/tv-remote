@@ -11,9 +11,11 @@ from androidtvremote2 import (
 )
 
 # Store pairing certificates privately on the phone.
-DATA_DIR = Path.home() / ".tv_remote"
+DATA_DIR = Path(
+    os.environ.get("FLET_APP_STORAGE_DATA")
+    or (Path.home() / ".tv_remote")
+)
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-
 CERT_FILE = str(DATA_DIR / "cert.pem")
 KEY_FILE = str(DATA_DIR / "key.pem")
 
