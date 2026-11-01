@@ -1,0 +1,5 @@
+flet>=0.23.0
+androidtvremote2>=0.0.15
+zeroconf>=0.132.0
+bleak>=0.22.0
+cryptography>=42.0.0
