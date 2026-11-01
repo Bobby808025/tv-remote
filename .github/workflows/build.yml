@@ -36,7 +36,7 @@ jobs:
           pip install flet
 
       - name: Build APK
-        run: flet build apk --project tvremote
+        run: flet build apk --project tvremote --yes
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
